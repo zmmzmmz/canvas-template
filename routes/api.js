@@ -4,8 +4,13 @@ const router = new Router({
   prefix: '/api'
 })
 
-router.post('/', async (ctx, next) => {
-   ctx.body = {}
+router.get('/', async (ctx, next) => {
+  ctx.body = {}
+})
+
+router.post('/template', async (ctx, next) => {
+  console.log(ctx.request.body)
+  ctx.body =  {}
 })
 
 export default router

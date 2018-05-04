@@ -10,6 +10,7 @@ const index = require('./routes/index')
 const users = require('./routes/users')
 import image from './routes/image'
 import api from './routes/api'
+import screen from './routes/screen'
 
 // error handler
 onerror(app)
@@ -39,5 +40,6 @@ app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(image.routes(), image.allowedMethods())
 app.use(api.routes(), api.allowedMethods())
+app.use(screen.routes(), screen.allowedMethods())
 
 module.exports = app
